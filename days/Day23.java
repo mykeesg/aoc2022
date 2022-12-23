@@ -39,7 +39,7 @@ public class Day23 extends Base {
                 line = reader.readLine();
                 for (int x = 0; x < SIZE; ++x) {
                     if (line.charAt(x) == '#') {
-                        elves.add(new Vector2D(x, y));
+                        elves.add(new Vector2D(x, -y));
                     }
                 }
             }
@@ -118,6 +118,10 @@ public class Day23 extends Base {
                 }
             }
 
+            if (!elvesMoved) {
+                break;
+            }
+
             if (rounds == 10) {
                 calculateBoundingBox();
                 emptyCount = 0;
@@ -129,14 +133,9 @@ public class Day23 extends Base {
                     }
                 }
             }
-
             //rotate moves
             moveIndex = (moveIndex + 1) % 4;
             ++rounds;
-
-            if (!elvesMoved) {
-                break;
-            }
         }
     }
 
