@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         if (args.length == 0) {
             // System.out.println("Usage: Main <day_number>");
-            new Day23().run();
+            new Day24().run();
             return;
         }
         switch (Integer.parseInt(args[0])) {
@@ -31,6 +31,8 @@ public class Main {
             case 21 -> new Day21().run();
 //            case 22 -> new Day22().run();
             case 23 -> new Day23().run();
+            case 24 -> new Day24().run();
+//            case 25 -> new Day25().run();
             default -> System.out.println("Solution not yet defined.");
         }
     }

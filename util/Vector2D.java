@@ -1,6 +1,7 @@
 package util;
 
 import java.util.Comparator;
+import java.util.List;
 
 public record Vector2D(int x, int y) {
     public static Vector2D from(String str, String separator) {
@@ -30,4 +31,11 @@ public record Vector2D(int x, int y) {
     public final static Vector2D SOUTH_WEST = new Vector2D(-1, -1);
     public final static Vector2D SOUTH = new Vector2D(0, -1);
     public final static Vector2D SOUTH_EAST = new Vector2D(1, -1);
+
+    public final static List<Vector2D> MAJOR_AXIS = List.of(
+            NORTH,
+            SOUTH,
+            WEST,
+            EAST
+    );
 }
